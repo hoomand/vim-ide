@@ -36,7 +36,7 @@ echo -e "Installing ctags and cscope"
 if [[ "$platform" == 'osx' ]]; then
 	brew install ctags
 	brew install cscope
-elif
+else
 	yum install -y ctags
 	yum install -y cscope
 fi
