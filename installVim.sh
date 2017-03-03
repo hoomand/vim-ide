@@ -1,9 +1,16 @@
 #!/bin/bash 
 
-
 VIM_ROOT=$HOME/.vim
 RANDOM_NR=`shuf -i 1000-90000 -n 1`
 INSTALL_ROOT=`pwd`
+
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='osx'
+fi
 
 if [ -d $VIM_ROOT -o -L $VIM_ROOT ]; then 
     mv $VIM_ROOT $HOME/.vim_$RANDOM_NR
@@ -25,14 +32,16 @@ fi
 
 ln -s $VIM_ROOT/vimrc $HOME/.vimrc
 
-echo -e "Installing ctags"
-brew install ctags
-
-echo -e "Installing cscope"
-brew install cscope
+echo -e "Installing ctags and cscope"
+if [[ "$platform" == 'osx' ]]; then
+	brew install ctags
+	brew install cscope
+elif
+	yum install -y ctags
+	yum install -y cscope
+fi
 
 echo -e "Initializing and checking out plugins submodules: "
-
 
 cd $VIM_ROOT 
 
