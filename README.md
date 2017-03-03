@@ -1,12 +1,10 @@
-VIM as IDE by Damian Ziobro
+VIM as IDE (originally by  Modified to suit my needs
 =======
+Configuration of VIM for daily use. I was initially having my own VIM
+configuration (in a separate repo), but after seeing this one made originally
+by Damian Ziobro, I noticed it's doing a better job! So, I am using this
+afterwards (Thank you Damian!) and add my own stuff to it.
 
-Configuration of VIM which we are using as IDE in our daily work 
+Configuration of VIM as Damian is using at work:
 
 ![ScreenShot](https://raw.github.com/xmementoit/vim-ide/master/images/vim-ide.png)
-
-Video demonstration
--------------------
-
-Below you can see video demonstration of usage of VIM as IDE by Damian Ziobro:
-[![ScreenShot](https://raw.github.com/xmementoit/vim-ide/master/images/vim_ide_youtube.png)](http://www.youtube.com/watch?v=wVw_FEKKZs0)
