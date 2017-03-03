@@ -306,16 +306,6 @@ function! BuildAndInstallCppApp()
     execute "!cd ".project_root."/build; sudo make install;"
 endfunction
 
-"==========================================================================="
-function! BuildAndInstallCSharpApp()
-    execute "!xbuild;"
-endfunction
-
-"==========================================================================="
-function! BuildAndInstallQtApp()
-    execute "!make;"
-endfunction
-
 function! OpenQuickFixInRightLocation() 
     execute ":TagbarClose"
     execute ":copen"
@@ -354,11 +344,6 @@ imap <F8> <ESC> <C-s> :call BuildAndInstallCppApp()<cr>
 " Make 
 nmap <C-F8> <C-s> :call BuildAndInstallQtApp()<cr>
 imap <C-F8> <ESC> <C-s> :call BuildAndInstallQtApp()<cr>
-
-"==========================================================================="
-" CSharp make 
-nmap <C-F5> <C-s> :call BuildAndInstallCSharpApp()<cr>
-imap <C-F5> <ESC> <C-s> :call BuildAndInstallCSharpApp()<cr>
 
 "==========================================================================="
 " Normal make 
