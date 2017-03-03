@@ -1067,3 +1067,11 @@ endif
 
 map <leader>gr :grep <C-R><C-w><CR><CR><CR>
 vmap <leader>gr :grep <C-R><C-w><CR><CR><CR>
+
+" " ========================================================================================
+" Commands
+" Prettify JSON files
+command Prettify %!python -m json.tool
+
+" Run python script by pressing F9
+autocmd FileType python nnoremap <buffer> <F9> :w<CR>:!clear;python %<CR>
