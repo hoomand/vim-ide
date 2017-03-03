@@ -16,11 +16,11 @@ set modelines=0
 
 " ========================================================================================
 "TAB settings.
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
-set showtabline=2
+set showtabline=4
 set ruler
 
 " ========================================================================================
